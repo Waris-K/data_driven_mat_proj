@@ -8,10 +8,11 @@ for i = 1:numSamples
     binaryLayout = zeros(16,1);
     binaryLayout(layout(1:8)) = 1; % 1 for stiff, 0 for soft
     
-    [~, strain_energy, u_avg] = runFEM1(binaryLayout);
+    [~, strain_energy, u_avg, compliance] = runFEM1(binaryLayout);
     % data = [data; binaryLayout',U, strain_energy];
-    data = [data; binaryLayout', strain_energy];
+    % data = [data; binaryLayout', strain_energy];
     % data = [data; binaryLayout', u_avg];
+    data = [data; binaryLayout', compliance];
 end
 
 save('fem_dataset.mat', 'data');

@@ -1,5 +1,5 @@
 
-function trainSurrogate()
+function[net, testMSE]= trainSurrogate()
 % Trains a neural network on the dataset
 
 load('fem_dataset.mat', 'data');
@@ -20,7 +20,7 @@ YTest = Y(testIdx);
 net = fitrnet(XTrain, YTrain, 'LayerSizes', [30 10], 'Activations','relu', 'Standardize', true);
 save('trained_surrogate.mat', 'net');
 
-testMSE = loss(net,XTest,YTest)
+testMSE = loss(net,XTest,YTest);
 
 testPredictions = predict(net,XTest);
 plot(YTest,testPredictions,".")

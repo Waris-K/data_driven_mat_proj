@@ -3,7 +3,7 @@
 clear; clc; close all;
 tic;
 % Step 1: Generate dataset
-numSamples = 50000;
+numSamples = 100000;
 disp('Generating FEM dataset...');
 generateDataset(numSamples);
 toc;
@@ -12,7 +12,7 @@ toc;
 % tic;
 % Step 2: Train surrogate model
 disp('Training surrogate model...');
-trainSurrogate();
+[net, testMSE]=trainSurrogate();
 % toc;
 %%
 

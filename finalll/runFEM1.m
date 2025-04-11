@@ -1,4 +1,4 @@
-function [U, strain_energy, u_avg] = runFEM1(materialLayout)    
+function [U, strain_energy, u_avg, compliance] = runFEM1(materialLayout)    
 % FEM code for in-plane loaded plate using quadrilateral elements (2D plane stress)
 
 
@@ -123,7 +123,7 @@ end
 
 strain_energy = 0.5*U'*K*U;
 u_avg = mean(U(forceNodes));
-
+compliance = F'*U;
 
 
 

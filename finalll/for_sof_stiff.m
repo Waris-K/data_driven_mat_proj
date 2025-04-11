@@ -6,7 +6,7 @@ clear all; clc; close all;
 % layout = randperm(16); % Random layout permutation
 % binaryLayout = zeros(16,1);
 % binaryLayout(layout(1:8)) = 1; % 1 for stiff, 0 for soft
-binaryLayout = [ 0 0 0 0 1 1 1 1 0 0 0 0 1 1 1 1];
+binaryLayout = [ 0    1     1     0     0     1     1     0     0    1     1     0     0     1     1     0];
 % Material properties
 Eh = 1e9;       % Young's modulus (Pa)
 Es = 0.1e9;
@@ -123,5 +123,5 @@ plotDeformedShape(nodes, elements, U, scaleFactor, binaryLayout);
 
 
 
-
+compliance = F'*U
 

@@ -24,11 +24,12 @@ rng(0,'twister') % for reproducibility
 % [x_opt, fval] = ga(objective, 16, [], [], [], [], lb, ub, nonlcon, intcon, options);
 
 disp(['Best compliance found: ', num2str(fval)]);
-[U, strain_energy_fem, u_avg] = runFEM1(x_opt);
+[U, strain_energy_fem, u_avg, compliance] = runFEM1(x_opt);
 
 % plotDeformedShape(U);
 strain_energy_fem
 u_avg
+compliance
 fval
 x_opt'
 
