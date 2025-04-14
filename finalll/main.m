@@ -3,7 +3,7 @@
 clear; clc; close all;
 tic;
 % Step 1: Generate dataset
-numSamples = 50000;
+numSamples = 5000;
 disp('Generating FEM dataset...');
 generateDataset(numSamples);
 toc;

@@ -31,10 +31,10 @@ testPredictions = predict(net, XTest);
 figure;
 scatter(YTest, testPredictions, 'filled')
 hold on
-plot(YTest, YTest, 'r--', 'LineWidth', 1.5)
+plot(YTest, YTest, 'r--', 'LineWidth', 2)
 hold off
-xlabel("True se")
-ylabel("Predicted se")
+xlabel("True SE")
+ylabel("Predicted SE")
 title("True vs Predicted SE")
 grid on
 

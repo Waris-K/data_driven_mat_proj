@@ -6,7 +6,7 @@ function plotDeformedShape(nodes, elements, U, scaleFactor, binaryLayout)
     % Plot original mesh
     for e = 1:size(elements, 1)
         nodeIndex = elements(e, :);
-        patch(nodes(nodeIndex, 1), nodes(nodeIndex, 2), 'w', 'EdgeColor', 'k', 'FaceColor', 'none');
+        patch(nodes(nodeIndex, 1), nodes(nodeIndex, 2), 'w', 'EdgeColor', 'b', 'FaceColor', 'none');
         
     end
     
@@ -17,13 +17,13 @@ function plotDeformedShape(nodes, elements, U, scaleFactor, binaryLayout)
         if binaryLayout(e)==1
             BlackorWhite = 'k';
         else
-            BlackorWhite = 'r'; 
+            BlackorWhite = 'w'; 
         end
         patch(deformedNodes(nodeIndex, 1), deformedNodes(nodeIndex, 2), 'w', 'EdgeColor', 'r', 'FaceColor', BlackorWhite);
       
     end
     
-    title('Deformed Shape (Red) vs Original Shape (Black)');
+    title('Deformed Shape  vs Original Shape ');
     xlabel('X');
     ylabel('Y');
     axis equal;
