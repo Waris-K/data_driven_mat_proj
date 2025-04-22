@@ -2,7 +2,7 @@
 
 This repository contains a finite element method (FEM) simulation framework for analyzing in-plane loaded plates using quadrilateral elements under 2D plane stress conditions. The project explores the effects of varying material stiffness distributions on structural responses such as displacement, stress, strain, and compliance.
 
-For a detailed overview of the problem being solved, please refer to the project report:
+For a detailed overview of the problem being solved, please refer to the project statement:
 
 📘 [Multi-Phase Material Design Project (PDF)](https://github.com/Waris-K/data_driven_mat_proj/blob/main/Multi-Phase-Material-Design-Project.pdf)
 
